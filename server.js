@@ -2,8 +2,6 @@ const express = require('express');
 const mysql = require('mysql2');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-require('dotenv').config(); // โหลดตัวแปรจากไฟล์ .env
-
 const app = express();
 const port = 3000;
 
