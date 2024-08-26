@@ -4,6 +4,14 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const app = express();
 const port = 3000;
+const https = require('https');
+const fs = require('fs');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const SECRET_KEY = 'UX23Y24%@&2aMb';
+const privateKey = fs.readFileSync('privatekey.pem', 'utf8');
+const certificate = fs.readFileSync('certificate.pem', 'utf8');
+const credentials = { key: privateKey, cert: certificate };
 
 // ตั้งค่าการเชื่อมต่อฐานข้อมูล MySQL
 const db = mysql.createConnection({
@@ -79,3 +87,8 @@ app.post('/login', (req, res) => {
 
 // เริ่มต้นเซิร์ฟเวอร์และรันที่พอร์ต 3000
 app.listen(port, () => console.log(`Server running on port ${port}`));
+// Create an HTTPS server
+const httpsServer = https.createServer(credentials, app);
+httpsServer.listen(port, () => {
+    console.log(`HTTPS Server running on port ${port}`);
+});
