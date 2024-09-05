@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".YourActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/carDetailsContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/carImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription=""
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/textBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorPrimary"
+                    android:text="Brand: Toyota" />
+
+                <TextView
+                    android:id="@+id/textModel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:text="Model: Camry" />
+
+                <TextView
+                    android:id="@+id/textYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="14sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:text="Year: 2023" />
+
+                <TextView
+                    android:id="@+id/textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="14sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:text="Color: Blue" />
+
+                <TextView
+                    android:id="@+id/textTransmissionType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="14sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:text="Transmission Type: Automatic" />
+
+                <TextView
+                    android:id="@+id/textFuelType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="14sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:text="Fuel Type: Gasoline" />
+
+                <TextView
+                    android:id="@+id/textNumberOfDoors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="14sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:text="Number of Doors: 4" />
+
+                <TextView
+                    android:id="@+id/textNumberOfSeats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="14sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:text="Number of Seats: 5" />
+
+                <TextView
+                    android:id="@+id/textPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Price: $30,000"
+                    android:textColor="?attr/colorAccent"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

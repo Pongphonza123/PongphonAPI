@@ -1,0 +1,20 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here -->
+    </style>
+
+    <!-- Bottom Navigation View Style -->
+    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">#333333</item> <!-- Dark background color -->
+        <item name="itemTextAppearance">@style/BottomNavTextAppearance</item> <!-- Apply custom text style -->
+        <item name="itemIconTint">@color/bottom_nav_icon_color</item> <!-- Icon color -->
+        <item name="itemTextColor">@color/bottom_nav_text_color</item> <!-- Text color -->
+    </style>
+
+    <!-- Text appearance for bottom navigation items -->
+    <style name="BottomNavTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item> <!-- Increased text size -->
+        <item name="android:textColor">@color/bottom_nav_text_color</item> <!-- Text color -->
+    </style>
+</resources>
